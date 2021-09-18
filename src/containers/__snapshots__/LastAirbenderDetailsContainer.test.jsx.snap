@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LastAirbenderDetails display a single character 1`] = `
+<div>
+  <div
+    data-testid="testing-div"
+  >
+    <img
+      alt="Aang"
+      src="https://vignette.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest?cb=20130612174003"
+    />
+    <h1>
+      Aang
+    </h1>
+    <h3>
+      Male
+    </h3>
+    <h3>
+       Air Nomad culture teacher Airbending instructor Avatar Monk
+    </h3>
+    <a
+      href="/"
+    >
+      Go Back
+    </a>
+  </div>
+</div>
+`;
