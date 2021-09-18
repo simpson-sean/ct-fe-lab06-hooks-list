@@ -22,7 +22,7 @@ const LastAirbenderDetailsContainer = () => {
 
         return (
             <div data-testid="testing-div">
-                <Character name={character.name} image={character.image} />
+                <Character name={character.name} image={character.image} gender={character.gender} profession={character.profession} />
                 <Link to={`/`}>Go Back</Link>
             </div>
         )

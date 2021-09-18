@@ -5,6 +5,8 @@ export const findCharacters = () => {
            return (json.map((character) => ({
                 id: character._id,
                 name: character.name,
+                gender: character.gender,
+                profession: character.profession,
                 image: character.photoUrl,
             }))
         )}

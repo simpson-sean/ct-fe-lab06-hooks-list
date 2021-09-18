@@ -11,7 +11,6 @@ const CharacterList = ({ characters }) => (
                     <Link to={`/${character.id}`}>          
                     <Character
                         image={character.image}
-                        name={character.name}
                     />
                     </Link>
                 </li>
@@ -26,6 +25,8 @@ CharacterList.propTypes = {
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
+            gender: PropTypes.string.isRequired,
+            profession: PropTypes.string.isRequired,
             image: PropTypes.string.isRequired 
         })
     ).isRequired
