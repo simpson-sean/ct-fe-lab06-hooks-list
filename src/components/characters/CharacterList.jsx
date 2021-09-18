@@ -24,9 +24,6 @@ CharacterList.propTypes = {
     characters: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-            gender: PropTypes.string.isRequired,
-            profession: PropTypes.string.isRequired,
             image: PropTypes.string.isRequired 
         })
     ).isRequired
