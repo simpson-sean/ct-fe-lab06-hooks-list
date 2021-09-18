@@ -17,6 +17,8 @@ export const findCharacterById = (id) => {
         .then((character) =>  ({
             id: character._id,
             name: character.name,
+            gender: character.gender,
+            profession: character.profession,
             image: character.photoUrl,
         }));
     

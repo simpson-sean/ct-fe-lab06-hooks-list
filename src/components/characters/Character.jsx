@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const Character = ({ name, image }) => (
     <>
         <img src={image} alt={name}></img>
@@ -9,6 +10,7 @@ const Character = ({ name, image }) => (
 );
 
 Character.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
 };

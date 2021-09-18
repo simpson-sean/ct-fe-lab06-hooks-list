@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { findCharacters, findCharacterById } from '../services/LastAirbenderAPI';
+import { findCharacters } from '../services/LastAirbenderAPI';
 import CharacterList from '../components/characters/CharacterList';
 
 export default class LastAirbenderContainer extends Component  {
@@ -13,24 +13,22 @@ export default class LastAirbenderContainer extends Component  {
 
     }
 
-render() {
-    const { loading, characters } = this.state;
-    console.log(characters, loading);
+    render() {
+        const { loading, characters } = this.state;
 
-    return (
-        <>
-          {loading ? (
-            <div>
-                <img 
-                src="https://powerusers.microsoft.com/t5/image/serverpage/image-id/118082i204C32E01666789C?v=v2"
-                alt="loading spinner" />
-            </div>
-          ) : (
-            <CharacterList characters={characters} />
-          )}
-        </>
-      );
-    };
-    
+        return (
+            <>
+            {loading ? (
+                <div>
+                    <img 
+                    src="https://powerusers.microsoft.com/t5/image/serverpage/image-id/118082i204C32E01666789C?v=v2"
+                    alt="loading spinner" />
+                </div>
+            ) : (
+                <CharacterList characters={characters} />
+            )}
+            </>
+        );
+    };    
 };
 
