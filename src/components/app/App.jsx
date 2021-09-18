@@ -10,7 +10,9 @@ export default function App() {
       <Route exact path="/:id">
         <LastAirbenderDetailsContainer />
       </Route>
-      <Route exact path="/" component={LastAirbenderContainer}/>
+      <Route exact path="/">
+        <LastAirbenderContainer />
+      </Route>
     </Switch>
   </Router>
   )

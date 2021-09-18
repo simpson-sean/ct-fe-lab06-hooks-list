@@ -1,34 +1,25 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import { findCharacters } from '../services/LastAirbenderAPI';
 import CharacterList from '../components/characters/CharacterList';
 
-export default class LastAirbenderContainer extends Component  {
-    state = {
-        loading: true,
-        characters: [],
-    };
+const LastAirbenderContainer = () => {
+    
+    const [loading, setLoading] = useState(true);
+    const [characters, setCharacters] = useState([])
 
-    componentDidMount() {
-        findCharacters().then((characters) => this.setState({ characters, loading: false}))
+    useEffect( () => {
+        findCharacters().then((characters) => {
+            setCharacters(characters);
+            setLoading(false);
+        })
+    }, [] )
 
-    }
-
-    render() {
-        const { loading, characters } = this.state;
-
-        return (
-            <>
-            {loading ? (
-                <div>
-                    <img 
-                    src="https://powerusers.microsoft.com/t5/image/serverpage/image-id/118082i204C32E01666789C?v=v2"
-                    alt="loading spinner" />
-                </div>
-            ) : (
-                <CharacterList characters={characters} />
-            )}
-            </>
-        );
-    };    
+    if(loading)return<img src="https://powerusers.microsoft.com/t5/image/serverpage/image-id/118082i204C32E01666789C?v=v2"
+    alt="loading spinner" />
+            
+    return(
+        <CharacterList characters={characters} />
+        )
 };
 
+export default LastAirbenderContainer;
