@@ -13,9 +13,6 @@ const Character = ({ name, image, gender, profession }) => (
 
 Character.propTypes = {
     id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    gender: PropTypes.string.isRequired,
-    profession: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
 };
 
